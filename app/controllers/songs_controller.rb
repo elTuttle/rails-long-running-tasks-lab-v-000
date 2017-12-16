@@ -12,7 +12,7 @@ class SongsController < ApplicationController
       artist = Artist.create(name: file[1])
       artist.songs.build(title: file[0])
     end
-    redirect_to customers_path
+    redirect_to songs_path
   end
   end
 
