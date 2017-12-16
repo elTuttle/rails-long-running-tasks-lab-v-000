@@ -11,6 +11,7 @@ class SongsController < ApplicationController
       artist = Artist.create(name: file[1])
       song = artist.songs.build(title: file[0])
       binding.pry
+      song.save
     end
     redirect_to songs_path
   end
